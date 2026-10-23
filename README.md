@@ -5,24 +5,24 @@
 **Project title:** An AI-Powered Regulatory Document Verification and Institutional Compliance Intelligence Platform  
 **Tagline:** *Every claim needs evidence.*
 
-> **Status:** This repository currently documents a proposed prototype. It does not claim that a deployed system, live AICTE integration, or external verification access already exists.
+> **Status:** This repository documents a proposed prototype. It does not claim that a deployed system, live AICTE integration, or external verification access already exists.
 
 ## What PRAMAN does
 
-PRAMAN is a decision-support platform for AICTE approval-related applications. It helps institutions submit applications and evidence, and helps authorized AICTE officers identify missing information, expired documents, cross-document inconsistencies, historical changes and items requiring further verification.
+PRAMAN is a decision-support platform for AICTE approval-related applications. It helps institutions submit applications and supporting evidence, and helps authorized AICTE officials identify missing information, expired documents, cross-document inconsistencies, historical changes and items requiring further verification.
 
 PRAMAN supports regulatory scrutiny; it does not replace statutory checks, inspections, or decisions reserved for the competent authority.
 
 ## Signature innovation
 
 ### Compliance Memory Graph
-Connects an institution's applications, documents, extracted claims, regulatory rules, source-verification results and officer actions across application cycles.
+Links an institution's applications, documents, extracted claims, regulatory rules, source-verification results and officer actions across application cycles.
 
 ### Compliance Drift Engine
 Compares current evidence with permitted historical records, detects meaningful changes, traces potentially affected validation checks and explains what needs re-verification.
 
 ### Evidence-linked findings
-Every finding should show its reason, relevant document/page, extracted value, applicable rule and next recommended action. An AI flag is an investigative lead, not proof of fraud or non-compliance.
+Each finding should show its reason, relevant document/page, extracted value, applicable rule and next recommended action. An AI flag is an investigative lead, not proof of fraud or non-compliance.
 
 ## End-to-end workflow
 
@@ -41,36 +41,43 @@ Every finding should show its reason, relevant document/page, extracted value, a
 
 ## Feature catalogue
 
-The complete feature-by-feature specification, architecture notes, workflow, data model, API outline, verification strategy, roadmap, testing plan and demonstration scenarios are packaged in **[the detailed documentation ZIP](docs/PRAMAN-GitHub-Docs.zip)**.
+Open the [complete documentation index](docs/README.md) to access each feature specification independently.
 
-| # | Feature | Purpose |
+| # | Feature | Specification |
 |---|---|---|
-| 1 | Institution profile & applications | Maintain institution identity, application categories, academic years and history. |
-| 2 | Secure document ingestion & versioning | Validate uploads, store files privately and preserve versions. |
-| 3 | Document understanding | OCR, classification, field extraction and page-level evidence. |
-| 4 | Regulatory rule engine | Run deterministic, versioned checks against the applicable checklist. |
-| 5 | Cross-document intelligence | Compare related claims across submitted documents. |
-| 6 | Compliance Memory Graph | Link institutions, applications, evidence, rules and review decisions. |
-| 7 | Compliance Drift Engine | Identify historical changes and trace affected checks. |
-| 8 | Authorized source verification | Use official verification mechanisms where supported and authorized. |
-| 9 | Integrity & anomaly detection | Detect duplicates and suspicious indicators for further review. |
-| 10 | Infrastructure evidence assistance | Flag documentary or visual evidence gaps where feasible. |
-| 11 | Findings & officer workbench | Present evidence, explanations, status and officer actions. |
-| 12 | Institution response loop | Support deficiency requests, replacement documents and revalidation. |
-| 13 | Rule change management | Version and approve checklists and regulatory rules. |
-| 14 | Alerts & notifications | Notify relevant users of pending work and deadlines. |
-| 15 | Audit trail | Record submissions, processing, source responses and review actions. |
-| 16 | Dashboards & reports | Summarize application status, findings, ageing and verification outcomes. |
-| 17 | AI design & boundaries | Define responsible AI uses, structured outputs and human review. |
-| 18 | Security & privacy | Enforce access control, private storage, data minimization and retention controls. |
+| 1 | Institution profile and application management | [Read](docs/features/01-institution-profile-and-applications.md) |
+| 2 | Secure document ingestion and versioning | [Read](docs/features/02-document-ingestion-and-versioning.md) |
+| 3 | OCR, classification and structured extraction | [Read](docs/features/03-document-understanding.md) |
+| 4 | Configurable regulatory rule engine | [Read](docs/features/04-regulatory-rule-engine.md) |
+| 5 | Cross-document intelligence | [Read](docs/features/05-cross-document-intelligence.md) |
+| 6 | Compliance Memory Graph | [Read](docs/features/06-compliance-memory-graph.md) |
+| 7 | Compliance Drift Engine | [Read](docs/features/07-compliance-drift-engine.md) |
+| 8 | Authorized source verification | [Read](docs/features/08-source-verification.md) |
+| 9 | Document integrity and anomaly detection | [Read](docs/features/09-integrity-and-anomaly-detection.md) |
+| 10 | Infrastructure evidence assistance | [Read](docs/features/10-infrastructure-evidence-assistance.md) |
+| 11 | Evidence-linked findings and officer workbench | [Read](docs/features/11-findings-and-officer-workbench.md) |
+| 12 | Institution response and correction loop | [Read](docs/features/12-institution-response-loop.md) |
+| 13 | Rule and checklist change management | [Read](docs/features/13-rule-change-management.md) |
+| 14 | Alerts and notifications | [Read](docs/features/14-alerts-and-notifications.md) |
+| 15 | Audit trail | [Read](docs/features/15-audit-trail.md) |
+| 16 | Dashboards, analytics and reports | [Read](docs/features/16-dashboards-and-reports.md) |
+| 17 | AI design and boundaries | [Read](docs/features/17-ai-design-and-boundaries.md) |
+| 18 | Security, privacy and governance | [Read](docs/features/18-security-and-privacy.md) |
 
-## Proposed users
+## Architecture and planning
 
-- **Institution users:** create applications, upload evidence, review permitted deficiencies and respond to requests.
-- **AICTE officers/reviewers:** inspect evidence, review findings, record observations and take authorized workflow actions.
-- **System/rule administrators:** manage users, document categories, approved checklists, rule versions and connector configuration.
-
-Access must be role-based and institution-scoped. Institution users must not be able to access another institution's restricted records.
+- [Product overview](docs/01-product-overview.md)
+- [User roles and access model](docs/02-user-roles-and-access.md)
+- [End-to-end workflow](docs/03-end-to-end-workflow.md)
+- [System architecture](docs/architecture/system-architecture.md)
+- [Data model](docs/architecture/data-model.md)
+- [API outline](docs/architecture/api-outline.md)
+- [Verification-source strategy](docs/architecture/verification-source-strategy.md)
+- [Prototype roadmap](docs/planning/prototype-roadmap.md)
+- [Testing and evaluation plan](docs/planning/testing-and-evaluation.md)
+- [Demonstration scenarios](docs/planning/demo-scenarios.md)
+- [Glossary](docs/glossary.md)
+- [Project status](PROJECT_STATUS.md)
 
 ## Proposed technology stack
 
@@ -104,11 +111,4 @@ Start with one application category and three supported document types. Demonstr
 
 Measure field-extraction accuracy against labelled test data, rule-validation accuracy, false-positive rate, evidence traceability, processing time, verification outcomes and officer review effort. Report actual measured results; do not claim untested accuracy.
 
-## Repository contents
-
-- `README.md` — product overview, workflow and feature index
-- `docs/PRAMAN-GitHub-Docs.zip` — detailed documentation pack with individual feature specifications
-- `PROJECT_STATUS.md` — implementation status and scope
-- `GITHUB_UPLOAD_GUIDE.md` — guidance for extracting and navigating the detailed documentation pack
-
-Feature status must be updated only after implementation and testing are demonstrated.
+See [Project Status](PROJECT_STATUS.md) for the current documented scope and next implementation milestone.
